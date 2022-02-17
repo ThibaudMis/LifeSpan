@@ -1,0 +1,33 @@
+
+
+
+.languagediv{
+    display: flex;
+    justify-content:space-between;
+    margin: 10px 20px;
+}
+
+
+.enlang_btn,.frlang_btn,.delang_btn,.eslang_btn{
+    width: 50px;
+    height: 30px;
+    border:none;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.25);
+    background-size: contain;
+    margin: 10px 0px;
+    cursor: pointer;
+}
+
+.enlang_btn{
+    background-image:url("icons/enIcon.png") ;
+}
+.frlang_btn{
+    background-image:url("icons/frIcon.png") ;
+}
+.delang_btn{
+    background-image:url("icons/deIcon.png") ;
+}
+.eslang_btn{
+    background-image:url("icons/esIcon.png") ;
+}

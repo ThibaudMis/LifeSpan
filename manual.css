@@ -1,0 +1,47 @@
+.manualform{
+    color: black;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    font-weight: 600;
+    text-align: left;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.14);
+    border-radius: 3px;
+}
+
+.OUT,.left,.IN {
+    margin-top: 10px;
+    padding: 0.5rem;
+    font-size: 1.25rem;    
+    border: 1px solid;
+    border-color: rgb(136, 136, 136);
+    border-radius: 2px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.manualreponseclass{
+    color: black;
+    margin-top: 10px;
+    font-size: 1.25rem; 
+    font-weight: 500;
+    border: none;
+    padding: 0.5rem;
+    background-color: white;
+    resize: none;
+    width: 100%;    
+}
+
+.manualtypeclass{
+    z-index: 1;
+}
+.fail{
+    border-color:red;
+    color: red;
+    width: 100%;
+}
+
+.nop{
+    display: none; 
+}

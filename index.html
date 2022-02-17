@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="Fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6164f8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./language.css">
+    <link rel="stylesheet" href="./auto.css">
+    <link rel="stylesheet" href="./manual.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon192.png">
+    <title>life Span</title>
+</head>
+
+
+
+<body>
+    <header>
+        <div class="topheader">
+            <h1>Life Span </h1>
+                <div class="menuselector">
+                    <button class= "menubtn">...</button>
+                </div>
+        </div>
+
+        <div class="menudivclass show" id="menudiv">    
+            <div class="languagediv">
+                <button class="enlang_btn" value="en"></button>
+                <button class="frlang_btn" value="fr"></button>
+                <button class="delang_btn" value="de"></button>
+                <button class="eslang_btn" value="es"></button>
+            </div>  
+        </div> 
+    </header>
+
+
+
+    <div class="selector">
+        <button class="select1_btn selected_btn" id="select1ID" >auto</button>
+        <button class="select2_btn" id="select2ID" >manuel</button>
+    </div>
+
+
+
+    <div class="autotypeclass" id="autodivID">
+        <form>
+            <div class="autoform"> 
+                <div id="013"></div>    
+                <input type="text" maxlength="25" class="lotinput" autocomplete="off"/>
+                <br>
+                <div id="014"></div>
+                <div class="timedivclass">
+                    <div>
+                        <input type="number" maxlength="5" class="timeinput" placeholder="hours"autocomplete="off" id='hourinput'/>
+                        <input type="number" maxlength="2" class="timeinput" placeholder="minutes"autocomplete="off" id='minuteinput'/>
+                    </div>
+                <button class="start_tbn" type="sunbmit">Start</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="material-container" id="materialContainerID">
+        <ul class="material_listclass"></ul>
+    </div> 
+
+
+
+    <div class="manualtypeclass switch" id="manualdivID">
+        <form>
+            <div class="manualform">
+                <div id="010"></div>
+        
+                <input type="datetime-local" id= "today" class="OUT"/>
+                <br>
+                <div id="011"></div>
+                <input type="number" id="hleft" class="left"/>
+                <br>
+                <div id="012"></div>
+                <input type="datetime-local" id= "today2" class="IN"/> 
+                <br>
+                <input type="text" class="nop">
+            </div>    
+        </form>
+        <textarea name="resulttext" class=manualreponseclass rows="6" id="res" disabled="true" ></textarea>
+    </div>
+        
+   
+    <script >
+
+        var currentlanguage =[]
+        const  getData=async(neededlanguage)=>{
+        const data= await fetch('language.json')
+                .then(reponse=>{
+                            if (reponse.ok===true){return reponse.json()}
+                            }) 
+        currentlanguage =data[neededlanguage]
+
+ }
+    </script>
+    <script src="./auto.js"></script>
+    <script src="./manual.js"></script>
+    <script src="./app.js"></script> 
+    
+    <footer>
+        <p>© Thibaud Mis 2022</p> 
+    </footer>  
+</body>
+
+</html>
