@@ -28,7 +28,7 @@ header{
     display: flex;
     flex-direction: column;
     justify-content:center;
-    margin-bottom: 25px;
+   
     border-bottom: 1px solid;
     transition: all 0.5s ease;
 }
@@ -50,6 +50,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .menubtn{

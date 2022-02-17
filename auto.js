@@ -169,9 +169,11 @@ function createMaterialDiv(){
     finish_btn.classList.add("finish_btn",thislotnumber[0])
     expanddiv.appendChild(finish_btn)
 
-   
-
-    material_list.appendChild(addedmaterialdiv)//inclu la div creer en js a la div list du html
+    if(Listlotnumber.length>0){
+    let fisrtNode=material_list.firstChild
+    material_list.insertBefore(addedmaterialdiv,fisrtNode)
+    }
+    else {material_list.appendChild(addedmaterialdiv)}//inclu la div creer en js a la div list du html
     
     
 
