@@ -1,9 +1,9 @@
 
 const menuButton = document.querySelector('.menubtn'); 
-const enlangbtn = document.querySelector('.enlang_btn');
-const frlangbtn = document.querySelector('.frlang_btn');
-const delangbtn = document.querySelector('.delang_btn');
-const eslangbtn = document.querySelector('.eslang_btn');
+const enlangbtn = document.querySelector('#en');
+const frlangbtn = document.querySelector('#fr');
+const delangbtn = document.querySelector('#de');
+const eslangbtn = document.querySelector('#es');
 const select1_btn = document.querySelector('.select1_btn');
 const select2_btn = document.querySelector('.select2_btn');
 
@@ -60,7 +60,9 @@ function changepage(){
 
 //load correct language and print it
 function textprint(){
-    
+    var actualclass=document.getElementById("lamg_btn").classList[1]
+    document.getElementById("lamg_btn").classList.replace(actualclass,lang)
+
     document.getElementById("010").innerText=currentlanguage[0];
     document.getElementById("011").innerText=currentlanguage[1];
     document.getElementById("012").innerText=currentlanguage[2];

@@ -205,7 +205,7 @@ function createMaterial(event){
     if(lotinput.value===""){return;}// pas d'action si champs vide
 
     //remplacement des espace par un tirer bas et passe le numero de lot un uppercase
-    lotinput.value=lotinput.value.replace(' ','_').toUpperCase()
+    lotinput.value=lotinput.value.replaceAll(' ','_').toUpperCase()
   
     //detection de SJ deja existan et creation d'un  sj /+n
     if(Listlotnumber.includes(lotinput.value)){

@@ -24,16 +24,16 @@
         <div class="topheader">
             <h1>Life Span </h1>
                 <div class="menuselector">
-                    <button class= "menubtn">...</button>
+                    <button class= "menubtn en" id="lamg_btn"></button>
                 </div>
         </div>
 
         <div class="menudivclass show" id="menudiv">    
             <div class="languagediv">
-                <button class="enlang_btn" value="en"></button>
-                <button class="frlang_btn" value="fr"></button>
-                <button class="delang_btn" value="de"></button>
-                <button class="eslang_btn" value="es"></button>
+                <button class="en langbtn" id="en" value="en"></button>
+                <button class="fr langbtn" id="fr" value="fr"></button>
+                <button class="de langbtn" id="de" value="de"></button>
+                <button class="es langbtn" id="es" value="es"></button>
             </div>  
         </div> 
     </header>
@@ -99,8 +99,9 @@
                             if (reponse.ok===true){return reponse.json()}
                             }) 
         currentlanguage =data[neededlanguage]
-
- }
+                             
+        }
+     
     </script>
     <script src="./auto.js"></script>
     <script src="./manual.js"></script>
