@@ -68,7 +68,7 @@ footer{
     height: 70px;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,.14);
     border-radius: 3px;
-    max-width: 340px;
+    max-width: 100%;
     transition: all 0.5s ease;    
 }
 
