@@ -72,6 +72,7 @@ input[type=number] {
     border:solid 1px rgb(0, 15, 146);
     border-radius: 3px;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,.25);
+    background-color: white;
     background-size: contain;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -141,13 +142,18 @@ input[type=number] {
     padding: 7px 0px;
 }
 
+.finish_btn{
+    background-image:url("icons/process.png") ;
+    border:solid 1px rgb(0, 15, 146);
+    transition: all 0.5s ease;
 
+
+}
 
 .delet_btn{
     
-    
-    border:solid 1px rgb(180, 0, 0);
-    background-color: rgb(209, 36, 36);
+    background-image:url("icons/delete.png") ;
+    border:solid 1px rgb(0, 15, 146);
     transition: all 0.5s ease;
 }
 .expired{
