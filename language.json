@@ -14,12 +14,12 @@
         " before material lapse.",
         "Enter batch number :",
         "Enter remaining lifespan :",
-        "Storage exit date :",
-        "Remaining lifespan :",
-        "Use before :",
-        "Back in storage date :",
-        "New lifespan :",
-        "Time at room temperature :"
+        "Storage exit date : ",
+        "Remaining lifespan : ",
+        "Use before : ",
+        "Back in storage date : ",
+        "New lifespan : ",
+        "Time at room temperature : "
         ],
 
 "fr":[
@@ -35,14 +35,14 @@
         " passée à temperature ambiante.\n\n",
         " passées à temperature ambiante.\n\n",
         " avant péremption.",
-        "Saisir le numéro de lot :",
-        "Saisir la durée de vie :",
-        "Date de sortie de stock :",
-        "Durée de vie",
-        "A utiliser avant le :",
-        "Date de remise en stock",
-        "Nouvelle durée de vie :",
-        "Temps à temperature ambiante :"
+        "Saisir le numéro de lot : ",
+        "Saisir la durée de vie : ",
+        "Date de sortie de stock : ",
+        "Durée de vie : ",
+        "A utiliser avant le : ",
+        "Date de remise en stock : ",
+        "Nouvelle durée de vie : ",
+        "Temps à temperature ambiante : "
          ],
 "de": [
         "Datum und Uhrzeit des Abgangs der Lagerung :",
@@ -57,14 +57,14 @@
         " bei Raumtemperatur.\n\n",
         " bei Raumtemperatur.\n\n",
         " bis zum Verfall der Materie.",
-        "Chargennummer eingeben :",
-        "Die Lebensdauer eingeben :",
-        "Ausgabedatum :",
-        "verbleibende Lebensdauer",
-        "Vor dem :",
-        "Zurück in der Lagerung Datum",
-        "Neue Lebensdauer :",
-        "Zeit bei Raumtemperatur :"
+        "Chargennummer eingeben : ",
+        "Die Lebensdauer eingeben : ",
+        "Ausgabedatum : ",
+        "verbleibende Lebensdauer : ",
+        "Vor dem : ",
+        "Zurück in der Lagerung Datum : ",
+        "Neue Lebensdauer : ",
+        "Zeit bei Raumtemperatur : "
         ],
 "es": [
         "Fecha y hora de salida al almacén :",
@@ -81,12 +81,12 @@
         " antes de la caducidad material.",
         "Introducir el número de lote :",
         "Introducir la vida útil :",
-        "Fecha de de salida :",
-        "vida útil restante :",
-        "Para usar antes del",
-        "Fecha de regreso en almacén :",
-        "Nueva vida útil :",
-        "Tiempo a temperatura ambiente :"
+        "Fecha de de salida : ",
+        "vida útil restante : ",
+        "Para usar antes del : ",
+        "Fecha de regreso en almacén : ",
+        "Nueva vida útil : ",
+        "Tiempo a temperatura ambiente : "
     ]                
 
 }

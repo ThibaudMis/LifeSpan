@@ -1,5 +1,5 @@
 .autotypeclass{
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,.14);
+    
     margin-top: 10px;
     z-index: 1;
 }
@@ -112,22 +112,38 @@ input[type=number] {
     font-weight: bold;
     min-width: 100%;
     border-radius: 3px;
-    
+    transition: all 0.5s ease;
 }
 .matinfoclass{
+    
+    min-width: 95%;
+    border-radius: 3px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.14);
+    
+}
+.lotOutclass,.lotInclass{
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 33% 33% 33%;
+    justify-content: left;
 
-    min-width: 100%;
+}
+.valclass{
+    margin-left: 3px;
+}
+.btn_contaner{
+    width: 50%;
     display: flex;
+    justify-content: space-between;
+    padding: 7px 0px;
 }
-.lotInclass{
-    min-width: 50%;
-    justify-content: right;
-}
+
 
 
 .delet_btn{
     
-    margin-top: 5px;
+    
     border:solid 1px rgb(180, 0, 0);
     background-color: rgb(209, 36, 36);
     transition: all 0.5s ease;

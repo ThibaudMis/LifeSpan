@@ -1,3 +1,8 @@
+.manualtypeclass{
+    
+    margin-top: 10px;
+    z-index: 1;
+}
 .manualform{
     color: black;
     padding: 5px;
@@ -8,6 +13,7 @@
     text-align: left;
     box-shadow: 0 2px 8px 0 rgba(0,0,0,.14);
     border-radius: 3px;
+   
 }
 
 .OUT,.left,.IN {

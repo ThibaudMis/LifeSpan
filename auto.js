@@ -78,104 +78,124 @@ function createMaterialDiv(){
     addedmaterialdiv.classList.add('materiallist',thislotnumber[0])
     addedmaterialdiv.setAttribute('id',thislotnumber[0])
 
-    //creation de la div bandeau toujours visible qui affiche le SJ
+//creation de la div bandeau toujours visible qui affiche le SJ
     const lotnumberdiv = document.createElement('div')
     lotnumberdiv.classList.add('lotnumberclass',thislotnumber[0])
     lotnumberdiv.innerText=thislotnumber[0]
     addedmaterialdiv.appendChild(lotnumberdiv)
 
-    //creation du bouton delet et ajout de bouton a la div developable
-    const delet_btn= document.createElement('button')
-    delet_btn.classList.add("delet_btn",thislotnumber[0])
-    delet_btn.setAttribute('id',"dlt"+thislotnumber[0])
-    lastexpandbtn=delet_btn
-    lotnumberdiv.appendChild(delet_btn)
-    
-    //creation de la div developable
+//creation de la div developable
     const expanddiv = document.createElement('div')
     expanddiv.classList.add('expenddivclass',thislotnumber[0])
     lastexpenddiv=expanddiv
     addedmaterialdiv.appendChild(expanddiv)
     
-    //creation de la div material info
+//creation de la div material info
     const matinfo = document.createElement('div')
     matinfo.classList.add('matinfoclass',thislotnumber[0])
     expanddiv .appendChild(matinfo)
-    //creation de la div lot sortant 
-    const lotOut = document.createElement('div')
-    lotOut.classList.add('lotOutclass',thislotnumber[0])
-    matinfo.appendChild(lotOut)
+
+
+// creation div premiere ligne text et de sa valeur
+    const L1 = document.createElement('div')
+    L1.classList.add('lotOutclass',thislotnumber[0])
+    matinfo.appendChild(L1)
     
-    // creation div premiere ligne text et de sa valeur
     const txtOut1 = document.createElement('div')
     txtOut1.classList.add('txtOutclass01')
-    lotOut.appendChild(txtOut1)
+    L1.appendChild(txtOut1)
 
     const valOut1 = document.createElement('div')
     valOut1.classList.add('valclass')
     valOut1.setAttribute('id',thislotnumber[0]+'valOut1')
-    lotOut.appendChild(valOut1)
+    L1.appendChild(valOut1)
 
-     // creation div deuxieme ligne text et de sa valeur
-     const txtOut2 = document.createElement('div')
-     txtOut2.classList.add('txtOutclass02')
-     lotOut.appendChild(txtOut2)
+// creation div deuxieme ligne text et de sa valeur
+    const L2 = document.createElement('div')
+    L2.classList.add('lotOutclass',thislotnumber[0])
+    matinfo.appendChild(L2)
+
+    const txtOut2 = document.createElement('div')
+    txtOut2.classList.add('txtOutclass02')
+    L2.appendChild(txtOut2)
  
-     const valOut2 = document.createElement('div')
-     valOut2.classList.add('valclass')
-     valOut2.setAttribute('id',thislotnumber[0]+'valOut2')
-     lotOut.appendChild(valOut2)
+    const valOut2 = document.createElement('div')
+    valOut2.classList.add('valclass')
+    valOut2.setAttribute('id',thislotnumber[0]+'valOut2')
+    L2.appendChild(valOut2)
+// creation div troisieme ligne text et de sa valeur
+    const L3 = document.createElement('div')
+    L3.classList.add('lotOutclass',thislotnumber[0])
+    matinfo.appendChild(L3)
 
-     // creation div troisieme ligne text et de sa valeur
-     const txtOut3 = document.createElement('div')
-     txtOut3.classList.add('txtOutclass03')
-     lotOut.appendChild(txtOut3)
+    const txtOut3 = document.createElement('div')
+    txtOut3.classList.add('txtOutclass03')
+    L3.appendChild(txtOut3)
  
-     const valOut3 = document.createElement('div')
-     valOut3.classList.add('valclass')
-     valOut3.setAttribute('id',thislotnumber[0]+'valOut3')
-     lotOut.appendChild(valOut3)
+    const valOut3 = document.createElement('div')
+    valOut3.classList.add('valclass')
+    valOut3.setAttribute('id',thislotnumber[0]+'valOut3')
+    L3.appendChild(valOut3)
 
 
 
-    //creation de la div lot entrant
-    const lotIn = document.createElement('div')
-    lotIn.classList.add('lotInclass')
-    matinfo.appendChild(lotIn)
-    // creation div premiere ligne text et de sa valeur
+// creation div premiere ligne text et de sa valeur
+    const L4 = document.createElement('div')
+    L4.classList.add('lotInclass')
+    matinfo.appendChild(L4)
+    
     const txtIn1 = document.createElement('div')
     txtIn1.classList.add('txtInclass01')
-    lotIn.appendChild(txtIn1)
+    L4.appendChild(txtIn1)
 
     const valIn1 = document.createElement('div')
     valIn1.classList.add('valclass')
     valIn1.setAttribute('id',thislotnumber[0]+'valIn1')
-    lotIn.appendChild(valIn1)
+    L4.appendChild(valIn1)
 
-     // creation div deuxieme ligne text et de sa valeur
-     const txtIn2 = document.createElement('div')
-     txtIn2.classList.add('txtInclass02')
-     lotIn.appendChild(txtIn2)
+// creation div deuxieme ligne text et de sa valeur
+    const L5 = document.createElement('div')
+    L5.classList.add('lotInclass')
+    matinfo.appendChild(L5)
+
+    const txtIn2 = document.createElement('div')
+    txtIn2.classList.add('txtInclass02')
+    L5.appendChild(txtIn2)
  
-     const valIn2 = document.createElement('div')
-     valIn2.classList.add('valclass')
-     valIn2.setAttribute('id',thislotnumber[0]+'valIn2')
-     lotIn.appendChild(valIn2)
+    const valIn2 = document.createElement('div')
+    valIn2.classList.add('valclass')
+    valIn2.setAttribute('id',thislotnumber[0]+'valIn2')
+    L5.appendChild(valIn2)
 
-     // creation div troisieme ligne text et de sa valeur
-     const txtIn3 = document.createElement('div')
-     txtIn3.classList.add('txtInclass03')
-     lotIn.appendChild(txtIn3)
+// creation div troisieme ligne text et de sa valeur
+    const L6 = document.createElement('div')
+    L6.classList.add('lotInclass')
+    matinfo.appendChild(L6)
+
+    const txtIn3 = document.createElement('div')
+    txtIn3.classList.add('txtInclass03')
+    L6.appendChild(txtIn3)
  
-     const valIn3 = document.createElement('div')
-     valIn3.classList.add('valclass')
-     valIn3.setAttribute('id',thislotnumber[0]+'valIn3')
-     lotIn.appendChild(valIn3)
+    const valIn3 = document.createElement('div')
+    valIn3.classList.add('valclass')
+    valIn3.setAttribute('id',thislotnumber[0]+'valIn3')
+    L6.appendChild(valIn3)
 
-    //creation du bouton finish et ajout de bouton a la div
+//creation de la div btn_contaner    
+    const btn_contaner = document.createElement('div')
+    btn_contaner.classList.add('btn_contaner')
+    expanddiv.appendChild(btn_contaner)
+//creation du bouton finish et ajout de bouton a la div
     const finish_btn= document.createElement('button')
     finish_btn.classList.add("finish_btn",thislotnumber[0])
-    expanddiv.appendChild(finish_btn)
+    btn_contaner.appendChild(finish_btn)
+
+//creation du bouton delet et ajout de bouton a la div developable
+    const delet_btn= document.createElement('button')
+    delet_btn.classList.add("delet_btn",thislotnumber[0])
+    delet_btn.setAttribute('id',"dlt"+thislotnumber[0])
+    lastexpandbtn=delet_btn
+    btn_contaner.appendChild(delet_btn)
 
     if(Listlotnumber.length>0){
     let fisrtNode=material_list.firstChild
