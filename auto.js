@@ -67,6 +67,12 @@ function computeData(){
 }
 
 function createMaterialDiv(){
+
+    //si il y a plus d'une entree dans la list, reduir la derniere expendediv ouvert
+    if(document.getElementsByClassName('lotnumberclass').length>0){
+    lastexpenddiv.classList.add('hideSJdiv')
+    lastexpandbtn.classList.add('hideSJdiv')}
+                
 //creation de la div principal qui contien l'ID sj
     const addedmaterialdiv = document.createElement('div')
     addedmaterialdiv.classList.add('materiallist',thislotnumber[0])
@@ -80,13 +86,15 @@ function createMaterialDiv(){
 
     //creation du bouton delet et ajout de bouton a la div developable
     const delet_btn= document.createElement('button')
-    delet_btn.classList.add("delet_btn",thislotnumber[0],'hideSJdiv')
+    delet_btn.classList.add("delet_btn",thislotnumber[0])
     delet_btn.setAttribute('id',"dlt"+thislotnumber[0])
+    lastexpandbtn=delet_btn
     lotnumberdiv.appendChild(delet_btn)
     
     //creation de la div developable
     const expanddiv = document.createElement('div')
-    expanddiv.classList.add('expenddivclass',thislotnumber[0],'hideSJdiv')
+    expanddiv.classList.add('expenddivclass',thislotnumber[0])
+    lastexpenddiv=expanddiv
     addedmaterialdiv.appendChild(expanddiv)
     
     //creation de la div material info
@@ -176,6 +184,7 @@ function createMaterialDiv(){
     else {material_list.appendChild(addedmaterialdiv)}//inclu la div creer en js a la div list du html
     
     
+    
 
 }
 
@@ -223,7 +232,7 @@ function createMaterial(event){
     }
 
     lifetime0=((hourinput.value*3600)+(minuteinput.value*60))//converti les heure et minute en timestamp
-
+    if(lifetime0<1){return;}
     //creation du datestamp a l'heure courant du navigateur
     let datestamp0 =new Date()
     datestamp0=datestamp0.getTime()
