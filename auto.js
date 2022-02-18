@@ -14,10 +14,10 @@ material_list.addEventListener("click",action)
 start_btn.addEventListener('click',createMaterial)
 
 loadData()
-
+checklifespan()
 
 function loadData(){
-
+    
     if(localStorage.getItem('Listlotnumber')!=null){
         Listlotnumber= Array.from(localStorage.getItem('Listlotnumber').split(','))
     }
@@ -247,10 +247,12 @@ function createMaterial(event){
     lotinput.value=""
     hourinput.value=""
     minuteinput.value=""
+    checklifespan()
 }
 
 function action(e){
-const item= e.target;
+    checklifespan()
+    const item= e.target;
 
 //delete material
     if(item.classList[0]==="delet_btn"){
@@ -349,3 +351,20 @@ function clearlocalstorage(){
     localStorage.clear();
     localStorage.setItem('language',lang);
 }
+
+function checklifespan(){
+
+    Array.from(document.getElementsByClassName('lotnumberclass')).forEach(item => {
+        
+        const id=item.classList[1]
+        let array= Array.from(localStorage.getItem(item.classList[1]).split(','))
+        let date =new Date()
+        date=date.getTime()
+        const thisspan =parseInt(array[3],10)+(parseInt(array[1],10)*1000)
+        
+        if(thisspan<date&&item.classList[2]!='expired'){
+            item.classList.add('expired')
+            }
+
+    })
+    }

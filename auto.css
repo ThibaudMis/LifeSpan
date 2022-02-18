@@ -98,6 +98,7 @@ input[type=number] {
     justify-content: space-between;
     font-size: 1rem;
     font-weight: bold;
+    text-decoration: underline;
     z-index: 2;
     transition: all 0.5s ease;
 }
@@ -131,7 +132,9 @@ input[type=number] {
     background-color: rgb(209, 36, 36);
     transition: all 0.5s ease;
 }
-
+.expired{
+    text-decoration: underline red;
+}
 
 .hideSJdiv{
     height: 0vh;
