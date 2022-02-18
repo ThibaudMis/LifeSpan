@@ -31,9 +31,11 @@ select2_btn.addEventListener('click',changepage)
 const setlang=async(a)=>{
     lang=a 
     localStorage.setItem('language',a);
-    getData(lang)
+    const mounth='Mounth_'+a
+    getData(lang, mounth)
     .then(reponse=>{
         textprint()
+        
         //ferme le menu s'il est ouvert
         if(!menudiv.classList.contains('show')){
             menudiv.classList.toggle('show')
@@ -62,6 +64,10 @@ function changepage(){
 function textprint(){
     var actualclass=document.getElementById("lamg_btn").classList[1]
     document.getElementById("lamg_btn").classList.replace(actualclass,lang)
+
+    document.getElementById("select2ID").innerText=currentlanguage[20]
+    document.getElementById("hourinput").placeholder=currentlanguage[21]
+    document.getElementById("minuteinput").placeholder=currentlanguage[22]
 
     document.getElementById("010").innerText=currentlanguage[0];
     document.getElementById("011").innerText=currentlanguage[1];

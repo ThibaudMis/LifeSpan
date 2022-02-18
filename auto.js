@@ -9,7 +9,6 @@ let thislotnumber =[]
 var lastexpenddiv=null;
 var lastexpandbtn
 var id,index
-let mountharray=['Janvier','Fevrier','Mars','avril']
 material_list.addEventListener("click",action)
 start_btn.addEventListener('click',createMaterial)
 
@@ -24,6 +23,7 @@ function loadData(){
     if(Listlotnumber[0]!=''){
         for(i=0; i<Listlotnumber.length;i++){
             thislotnumber= Array.from(localStorage.getItem(Listlotnumber[i]).split(','))
+
             createMaterialDiv()
             showData()
         }
@@ -59,6 +59,7 @@ function computeData(){
         thislotnumber[9]=convertStampDate(thislotnumber[4])//converti le stamp duree de vie restante en date
         thislotnumber[5]=thislotnumber[4]-thislotnumber[3]// calcule le temps a l'ambiant en stamp
         thislotnumber[2]=thislotnumber[1]-Math.trunc((thislotnumber[5]/1000))
+        if(thislotnumber[2]<0){thislotnumber[2]=0}
         thislotnumber[10]=convertStampHM((thislotnumber[5]/1000))//converti le stamp duree de vie restante en heurs et minute
     }
     //console.log('1 stamp duree de vie de sortie :'+thislotnumber[1]+'\n2 stamp duree de vie de retour :'+thislotnumber[2]+'\n3 stamp de sortie :'+thislotnumber[3]+'\n4 stamp de retour :'+thislotnumber[4]+'\n5 stamp ecart temps :'+thislotnumber[5])
@@ -210,19 +211,20 @@ function createMaterialDiv(){
 
 function showData(){
     Array.from(document.getElementsByClassName('txtOutclass01')).forEach(item => item.innerText=currentlanguage[14])
-    document.getElementById(thislotnumber[0]+"valOut1").innerHTML=thislotnumber[8]
+    document.getElementById(thislotnumber[0]+"valOut1").innerHTML=thislotnumber[8].replaceAll(':','h')
     Array.from(document.getElementsByClassName('txtOutclass02')).forEach(item => item.innerText=currentlanguage[15])
     document.getElementById(thislotnumber[0]+"valOut2").innerHTML=thislotnumber[6]
     Array.from(document.getElementsByClassName('txtOutclass03')).forEach(item => item.innerText=currentlanguage[16])
-    document.getElementById(thislotnumber[0]+"valOut3").innerHTML=thislotnumber[11]
-
+    document.getElementById(thislotnumber[0]+"valOut3").innerHTML=thislotnumber[11].replaceAll(':','h')
+    
+    if(thislotnumber[9]){
     Array.from(document.getElementsByClassName('txtInclass01')).forEach(item => item.innerText=currentlanguage[17])
-    document.getElementById(thislotnumber[0]+"valIn1").innerHTML=thislotnumber[9]
+    document.getElementById(thislotnumber[0]+"valIn1").innerHTML=thislotnumber[9].replaceAll(':','h')
     Array.from(document.getElementsByClassName('txtInclass02')).forEach(item => item.innerText=currentlanguage[18])
     document.getElementById(thislotnumber[0]+"valIn2").innerHTML=thislotnumber[7]
     Array.from(document.getElementsByClassName('txtInclass03')).forEach(item => item.innerText=currentlanguage[19])
     document.getElementById(thislotnumber[0]+"valIn3").innerHTML=thislotnumber[10]
-    
+    }
 }
 
 function saveData(){
@@ -232,7 +234,7 @@ function saveData(){
 
 function createMaterial(event){
     event.preventDefault();// script anti refresh
-    
+
     if(lotinput.value===""){return;}// pas d'action si champs vide
 
     //remplacement des espace par un tirer bas et passe le numero de lot un uppercase

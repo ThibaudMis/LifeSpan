@@ -92,13 +92,15 @@
     <script >
 
         var currentlanguage =[]
-        const  getData=async(neededlanguage)=>{
+        var mountharray=[]
+        const  getData=async(neededlanguage,neededmounth)=>{
         const data= await fetch('language.json')
                 .then(reponse=>{
                             if (reponse.ok===true){return reponse.json()}
                             }) 
         currentlanguage =data[neededlanguage]
-                             
+        mountharray=data[neededmounth]
+                        
         }
      
     </script>

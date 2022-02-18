@@ -19,7 +19,10 @@
         "Use before : ",
         "Back in storage date : ",
         "New lifespan : ",
-        "Time at room temperature : "
+        "Time at room temperature : ",
+        "manual",
+        "Hours",
+        "Minutes"
         ],
 
 "fr":[
@@ -42,7 +45,10 @@
         "A utiliser avant le : ",
         "Date de remise en stock : ",
         "Nouvelle durée de vie : ",
-        "Temps à temperature ambiante : "
+        "Temps à temperature ambiante : ",
+        "manuel",
+        "Heures",
+        "Minutes"
          ],
 "de": [
         "Datum und Uhrzeit des Abgangs der Lagerung :",
@@ -60,11 +66,14 @@
         "Chargennummer eingeben : ",
         "Die Lebensdauer eingeben : ",
         "Ausgabedatum : ",
-        "verbleibende Lebensdauer : ",
+        "Verbleibende Lebensdauer : ",
         "Vor dem : ",
         "Zurück in der Lagerung Datum : ",
         "Neue Lebensdauer : ",
-        "Zeit bei Raumtemperatur : "
+        "Zeit bei Raumtemperatur : ",
+        "manuell",
+        "Stunden",
+        "Minuten"
         ],
 "es": [
         "Fecha y hora de salida al almacén :",
@@ -86,7 +95,24 @@
         "Para usar antes del : ",
         "Fecha de regreso en almacén : ",
         "Nueva vida útil : ",
-        "Tiempo a temperatura ambiente : "
-    ]                
+        "Tiempo a temperatura ambiente : ",
+        "manual",
+        "Houras",
+        "Minutos"
+    ],                
+        "Mounth_en":[
+                "January","Febuary","March","April","May","June","July","Aout","September","October","November","December"
+        ],
 
+        "Mounth_fr":[
+                "Janvier","Fevrier","März","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"
+        ],
+
+        "Mounth_de":[
+                "Januar","Februar","Mars","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"
+        ],
+
+        "Mounth_es":[
+                "Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"
+        ]
 }
