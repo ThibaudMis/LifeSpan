@@ -33,7 +33,7 @@ function loadData(){
 
 function createArray(sj,lifetime0,lifetime1,datestamp0,datestamp1,timebetweenstamp,lifedate0,lifedate1,date0,date1,timebetweendate,exdate,){
     Listlotnumber.push(sj)
-    thislotnumber = [sj,lifetime0,lifetime1,datestamp0,datestamp1,timebetweenstamp,lifedate0,lifedate1,date0,date1,timebetweendate,exdate,]    
+    thislotnumber = [sj,lifetime0,lifetime1,datestamp0,datestamp1,timebetweenstamp,lifedate0,lifedate1,date0,date1,timebetweendate,exdate,false]    
 }
 
 function computeData(){
@@ -61,6 +61,7 @@ function computeData(){
         thislotnumber[2]=thislotnumber[1]-Math.trunc((thislotnumber[5]/1000))
         if(thislotnumber[2]<0){thislotnumber[2]=0}
         thislotnumber[10]=convertStampHM((thislotnumber[5]/1000))//converti le stamp duree de vie restante en heurs et minute
+        thislotnumber[11]=true
     }
     //console.log('1 stamp duree de vie de sortie :'+thislotnumber[1]+'\n2 stamp duree de vie de retour :'+thislotnumber[2]+'\n3 stamp de sortie :'+thislotnumber[3]+'\n4 stamp de retour :'+thislotnumber[4]+'\n5 stamp ecart temps :'+thislotnumber[5])
     //console.log('6 duree de vie :'+thislotnumber[6]+'\n7 nouvelle duree de vie :'+thislotnumber[7]+'\n8 date de sortie :'+thislotnumber[8]+'\n9 date de retour :'+thislotnumber[9]+'\n10 temps a l ambiant :'+thislotnumber[10]+'\n11 expire le :'+thislotnumber[11])
@@ -217,7 +218,8 @@ function showData(){
     Array.from(document.getElementsByClassName('txtOutclass03')).forEach(item => item.innerText=currentlanguage[16])
     document.getElementById(thislotnumber[0]+"valOut3").innerHTML=thislotnumber[11].replaceAll(':','h')
     
-    if(thislotnumber[9]){
+    if( thislotnumber[11]===true){
+        console.log("bas le couille du if")
     Array.from(document.getElementsByClassName('txtInclass01')).forEach(item => item.innerText=currentlanguage[17])
     document.getElementById(thislotnumber[0]+"valIn1").innerHTML=thislotnumber[9].replaceAll(':','h')
     Array.from(document.getElementsByClassName('txtInclass02')).forEach(item => item.innerText=currentlanguage[18])

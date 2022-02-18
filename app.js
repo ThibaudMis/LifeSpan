@@ -75,13 +75,6 @@ function textprint(){
     document.getElementById("013").innerText=currentlanguage[12];
     document.getElementById("014").innerText=currentlanguage[13];
     if(lifespan!=null){showreponce()}
-    
-    Array.from(document.getElementsByClassName('txtOutclass01')).forEach(item => item.innerText=currentlanguage[14])
-    Array.from(document.getElementsByClassName('txtOutclass02')).forEach(item => item.innerText=currentlanguage[15])
-    Array.from(document.getElementsByClassName('txtOutclass03')).forEach(item => item.innerText=currentlanguage[16])
-
-    Array.from(document.getElementsByClassName('txtInclass01')).forEach(item => item.innerText=currentlanguage[17])
-    Array.from(document.getElementsByClassName('txtInclass02')).forEach(item => item.innerText=currentlanguage[18])
-    Array.from(document.getElementsByClassName('txtInclass03')).forEach(item => item.innerText=currentlanguage[19])
-}   
+    showData()
+    }   
 
