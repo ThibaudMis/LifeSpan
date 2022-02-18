@@ -3,4 +3,3 @@ if("serviceWorker" in navigator){
         console.log("serviceWorker ready");
     }).catch(error =>{console.log("error serviceWorker");});
 }
-<script src="./index.js"></script>
