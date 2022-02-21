@@ -29,10 +29,10 @@
 }
 
 .manualreponseclass{
-    color: black;
+    
     margin-top: 10px;
     font-size: 1.25rem; 
-    font-weight: 500;
+    font-weight: bold;
     border: none;
     padding: 0.5rem;
     background-color: white;
