@@ -377,7 +377,7 @@ function clearlocalstorage(){
 }
 
 function checklifespan(){
-
+    //fonction test if product is expiered
     Array.from(document.getElementsByClassName('lotnumberclass')).forEach(item => {
         
         const id=item.classList[1]
